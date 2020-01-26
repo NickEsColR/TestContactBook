@@ -18,6 +18,8 @@ class ContactBookTest {
 		ctc1 = new Contact("Diego Lopez","superdi84@gmail.com","3576789321");
 		ctc2 = new Contact("Juan Cardona","juan123@gmail.com","3529045901");
 		ctc3 = new Contact("Elsa broso","temamastewey@gmail.com","3244448909");
+		
+		ctb1 = new ContactBook();
 	}
 
 	@Test

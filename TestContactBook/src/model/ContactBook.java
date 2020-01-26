@@ -10,7 +10,7 @@ public class ContactBook {
 	//methods
 	
 	public ContactBook() {
-		
+		contacts = new ArrayList<Contact>();
 	}
 
 	public ArrayList<Contact> getContacts() {
@@ -19,9 +19,9 @@ public class ContactBook {
 
 	public boolean add( String name, String email, String phone) {
 		boolean addSuccess = false;
-
+		
 		if(!contacts.contains(new Contact(name,email,phone))) {
-			contacts.add(new Contact(name, email, phone));
+			contacts.add(new Contact(name,email,phone));
 			addSuccess = true;
 		}
 		
