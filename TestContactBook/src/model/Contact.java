@@ -28,6 +28,17 @@ public class Contact {
 	public String getPhone() {
 		return phone;
 	}
+
+	public boolean equals(Contact ctc) {
+		
+		boolean bool = false;
+		
+		if(ctc.getName().equals(name)&&ctc.getEmail().equals(email)&&ctc.getPhone().equals(phone)) {
+			bool = true;
+		}
+		
+		return bool;
+	}
 	
 	
 }

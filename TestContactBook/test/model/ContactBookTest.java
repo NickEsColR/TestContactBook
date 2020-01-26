@@ -32,10 +32,6 @@ class ContactBookTest {
 		
 		ArrayList <Contact>contacts = ctb1.getContacts();
 		
-		if(contacts.get(0).equals(ctc1)) {
-			System.out.println("Aqui");
-		}else System.out.println("Alla");
-		
 		assertTrue(contacts.get(0).equals(ctc1),"The contact1 wasn't added correctly");
 		assertTrue(contacts.get(1).equals(ctc2),"The contact2 wasn't added correctly");
 		assertTrue(contacts.get(2).equals(ctc3),"The contact3 wasn't added correctly");
@@ -50,7 +46,21 @@ class ContactBookTest {
 		ctb1.add("Juan Cardona","juan123@gmail.com","3529045901");
 		ctb1.add("Elsa broso","temamastewey@gmail.com","3244448909");
 		
-		assertEquals(ctc2,ctb1.search("juan123@gmail.com"),"The ctc2 wasn't returned correctly");
+		assertTrue(ctc2.equals(ctb1.search("juan123@gmail.com")),"The ctc2 wasn't returned correctly");
+	}
+	
+	@Test
+	public void removeTest() {
+		setup1();
+		
+		ctb1.add("Diego Lopez","superdi84@gmail.com","3576789321");
+		ctb1.add("Juan Cardona","juan123@gmail.com","3529045901");
+		ctb1.add("Elsa broso","temamastewey@gmail.com","3244448909");
+		
+		assertTrue(ctc3.equals(ctb1.remove("temamastewey@gmail.com")),"The ctc3 wasn't returned correctly");
+		
+		assertTrue(ctb1.search("temamastewey@gmail.com")==null,"The ctc3 wasn't removed correctly");
+		
 	}
 
 }
