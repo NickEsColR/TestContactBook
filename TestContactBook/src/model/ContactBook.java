@@ -28,7 +28,7 @@ public class ContactBook {
 	
 	public Contact search(String email) {
 	Contact searchContact = null;
-		for(int i = 0;i < contacts.length;i++) {
+		for(int i = 0;i < contacts.length();i++) {
 			if(contacts.get(i).getEmail().equals(email)) {
 				searchContact = contacts.get(i);
 			}
