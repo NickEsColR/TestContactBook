@@ -32,9 +32,13 @@ class ContactBookTest {
 		
 		ArrayList <Contact>contacts = ctb1.getContacts();
 		
-		assertTrue(contacts.contains(ctc1),"The contact1 wasn't added correctly");
-		assertTrue(contacts.contains(ctc2),"The contact2 wasn't added correctly");
-		assertTrue(contacts.contains(ctc3),"The contact3 wasn't added correctly");
+		if(contacts.get(0).equals(ctc1)) {
+			System.out.println("Aqui");
+		}else System.out.println("Alla");
+		
+		assertTrue(contacts.get(0).equals(ctc1),"The contact1 wasn't added correctly");
+		assertTrue(contacts.get(1).equals(ctc2),"The contact2 wasn't added correctly");
+		assertTrue(contacts.get(2).equals(ctc3),"The contact3 wasn't added correctly");
 		
 	}
 	
